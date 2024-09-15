@@ -16,5 +16,9 @@ git add Headings
 STATUS=$(git status -s)
 if [ -n "${STATUS}" ]; then
   git commit -m "update Headings"
-  git push --recurse-submodules=on-demand
 fi;
+
+NOT_PUSHED_COMMITS="$(git log origin/master..master)"
+if [ -n "${NOT_PUSHED_COMMITS}" ]; then
+  git push --recurse-submodules=on-demand
+fi
