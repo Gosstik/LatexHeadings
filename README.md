@@ -97,26 +97,7 @@ git rebase origin/master
 ### Publish submodule changes
 
 ```bash
-### One-shot
 ./Headings/Scripts/Publish.sh
-
-### Manual
-# Commit changes in Heading
-cd Headings
-git add -A
-git commit -m "feat: updates"
-git push
-cd ..
-
-# Add new commits from submodule
-git add Headings
-git commit -m "update Headings"
-
-# Option 1 (push with submodules)
-git push --recurse-submodules=on-demand
-
-# Option 2 (check that submodules are pushed)
-git push --recurse-submodules=check
 ```
 
 
