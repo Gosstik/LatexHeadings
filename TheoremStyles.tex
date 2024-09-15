@@ -19,20 +19,9 @@
 % \newtheorem{NameInLatex}
 % [SharedCounter] % == NameInLatex for other theorem
 % {NameInText}
-% [section|subsection|...] % number of indeces in theorem name
+% [section|subsection|...] % number of indexes in theorem name
 
-\newtheorem{theorem}{\indent Теорема}
-% \newtheorem{theorem}{\indent Теорема}[section]
-\newtheorem{lemma}[theorem]{\indent Лемма}
-\newtheorem{example}[theorem]{\indent Пример}
-\newtheorem{problem}[theorem]{\indent Задача}
-\newtheorem{remark}[theorem]{\indent Замечание}
-\newtheorem{assumption}[theorem]{\indent Предположение}
-\newtheorem{proposition}[theorem]{\indent Предложение}
-\newtheorem{definition}[theorem]{\indent Определение}
-\newtheorem{corollary}[theorem]{\indent Следствие}
-\newtheorem{claim}[theorem]{\indent Утверждение}
-\newtheorem{algo}[theorem]{\indent Алгоритм}
+\input{../CustomHeadings/TheoremCounters}
 
 % Заливка фона теорем
 \tcolorboxenvironment{definition}{
