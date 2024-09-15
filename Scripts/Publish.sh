@@ -13,5 +13,8 @@ source "${SCRIPT_DIR}/CommitAndPush.sh"
 # Add new commits from submodule
 cd "${PROJECT_DIR}"
 git add Headings
-git commit -m "update Headings"
-git push --recurse-submodules=on-demand
+STATUS=$(git status -s)
+if [ -n "${STATUS}" ]; then
+  git commit -m "update Headings"
+  git push --recurse-submodules=on-demand
+fi;
