@@ -71,7 +71,7 @@ git push -u origin master
 ### Pull changes
 
 ```bash
-# Option 1 (auto)
+# Option 1 (auto, prefer option 2)
 git pull --recurse-submodules
 
 # Option 2 (after git pull)
