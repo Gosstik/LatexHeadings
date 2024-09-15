@@ -97,8 +97,11 @@ git rebase origin/master
 ### Publish submodule changes
 
 ```bash
-# Set config
-git config push.recurseSubmodules check
+cd Headings
+git add -A
+git commit -m "feat: updates"
+git push
+cd ..
 
 # Add new commits from submodule
 git add Headings
