@@ -90,3 +90,9 @@ git commit -m "<commit_message>"
 git config -f .gitmodules submodule.Headings.branch master
 git config status.submodulesummary 1
 ```
+
+
+### Handy
+
+- [Latex engines](https://www.overleaf.com/learn/latex/Articles/What%27s_in_a_Name%3A_A_Guide_to_the_Many_Flavours_of_TeX).
+- [How to wrile thesis](https://www.overleaf.com/learn/latex/How_to_Write_a_Thesis_in_LaTeX_(Part_1)%3A_Basic_Structure)

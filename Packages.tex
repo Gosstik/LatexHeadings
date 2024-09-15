@@ -66,19 +66,58 @@
 %%%% Language of document
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\usepackage{iftex}            % \iftutex
 \usepackage{cmap}					    % enable search in PDF
-\usepackage[T2A]{fontenc}			    % encoding of pdf
+
+
+% Handle special symbols. May be undefined when LuaTex is used.
+\iftutex % to detect if Unicode-aware engine (LuaTeX or XeTeX) is used
+
+\usepackage{fontspec}
+\usepackage{unicode-math} % loads 'fontspec' automatically
+% \setmainfont{Noto Serif}
+% \setsansfont{Noto Sans}
+% \setmonofont{Noto Sans Mono}
+
+\usepackage[babelshorthands=true]{polyglossia}
+\let\lang\relax\let\endlang\relax % avoid conflict with complexity.sty
+
+\setdefaultlanguage{russian}
+\setotherlanguage{english}
+
+\defaultfontfeatures{Ligatures=TeX}
+
+\setmainfont{Times New Roman}
+\setsansfont{Arial}
+\setmonofont[Contextuals=Alternate]{Fira Code}
+
+\newfontfamily\cyrillicfont{Times New Roman}
+\newfontfamily\cyrillicfontsf{Arial}
+\newfontfamily\cyrillicfonttt[Contextuals=Alternate]{Fira Code}
+
+\newfontfamily\englishfont{Times New Roman}
+\newfontfamily\englishfontsf{Arial}
+\newfontfamily\englishfonttt[Contextuals=Alternate]{Fira Code}
+
+\else
+
+\usepackage[T2A]{fontenc}			    % encoding of pdf (old 8-bit technologies)
+\input{glyphtounicode}
+\input{glyphtounicode-cmr} %from pdfx package
+\pdfgentounicode=1
+
+\fi
+
 \usepackage[utf8]{inputenc}             % encoding of sources (.tex files)
 \usepackage{csquotes}                   % for bable + bibletex (\enquote + \textquote)
+\usepackage{hyphsubst}                % suppress "No hyphenation patterns were preloaded for"
 \usepackage[english, russian]{babel}	% localisation + word breaks
 \usepackage{tempora} % this supports Cyrillic for russian
 % \frenchspacing                          % enables equal spacing between sentences and words
 % \usepackage{courier}                    % modern font family
 
-% Handle special symbols.
-\input{glyphtounicode}
-\input{glyphtounicode-cmr.tex} %from pdfx package
-\pdfgentounicode=1
+%%% Hyphenation: https://tex.stackexchange.com/questions/550978/hyphenrules-no-longer-defined-in-polyglossia
+% \usepackage{polyglossia}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Table of content
