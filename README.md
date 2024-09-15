@@ -97,6 +97,11 @@ git rebase origin/master
 ### Publish submodule changes
 
 ```bash
+### One-shot
+./Headings/Scripts/Publish.sh
+
+### Manual
+# Commit changes in Heading
 cd Headings
 git add -A
 git commit -m "feat: updates"
