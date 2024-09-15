@@ -2,6 +2,7 @@
 
 set -ev
 
+CUR_DIR="$(pwd)"
 SCRIPT_DIR="$(realpath "$(dirname "${BASH_SOURCE[0]}" )")"
 HEADING_DIR="$(dirname "${SCRIPT_DIR}")"
 PROJECT_DIR="$(dirname "${HEADING_DIR}")"
