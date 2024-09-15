@@ -87,7 +87,7 @@ git submodule update --init --remote --recursive --rebase
 # --rebase - ...
 git submodule update --remote --rebase Headings
 
-# Option 4 (manual)
+# Option 2 (manual)
 cd Headings
 git fetch
 git rebase origin/master
@@ -99,6 +99,10 @@ git rebase origin/master
 ```bash
 # Set config
 git config push.recurseSubmodules check
+
+# Add new commits from submodule
+git add Headings
+git commit -m "update Headings"
 
 # Option 1 (push with submodules)
 git push --recurse-submodules=on-demand
