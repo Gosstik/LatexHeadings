@@ -8,7 +8,7 @@ HEADING_DIR="$(dirname "${SCRIPT_DIR}")"
 PROJECT_DIR="$(dirname "${HEADING_DIR}")"
 
 # Commit changes in Headings
-source "${HEADING_DIR}/Push.sh"
+source "${SCRIPT_DIR}/CommitAndPush.sh"
 
 # Add new commits from submodule
 cd "${PROJECT_DIR}"
