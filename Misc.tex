@@ -483,8 +483,8 @@
 
 % https://tex.stackexchange.com/questions/137184/how-to-specify-a-date-and-then-use-it-with-a-time-format-defined-using-the-packa
 
-\newdateformat{lastUpdatedDateFormat}{\monthnameenglish[\THEMONTH] \THEYEAR}
-% \newdateformat{lastUpdatedDateFormat}{\monthnameenglish[\THEMONTH]\ \THEDAY,\ \THEYEAR}
+% \newdateformat{lastUpdatedDateFormat}{\monthnameenglish[\THEMONTH] \THEYEAR}
+\newdateformat{lastUpdatedDateFormat}{\monthnameenglish[\THEMONTH]\ \THEDAY,\ \THEYEAR}
 
 \newcommand{\displayLastUpdatedDate}[1]{
   \textit{Last updated in \lastUpdatedDateFormat\displaydate{#1}}
