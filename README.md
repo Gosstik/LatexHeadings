@@ -78,6 +78,8 @@ git push -u origin master
 ./Headings/Scripts/CommitAndPush.sh
 
 ### Push all changes (without add in main repo)
+git add <files_to_add>
+git commit -m "<commit_message>"
 ./Headings/Scripts/Publish.sh
 ```
 
