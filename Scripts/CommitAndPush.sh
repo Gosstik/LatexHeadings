@@ -8,8 +8,12 @@ HEADING_DIR="$(dirname "${SCRIPT_DIR}")"
 PROJECT_DIR="$(dirname "${HEADING_DIR}")"
 
 cd "${HEADING_DIR}"
-git add -A
-git commit -m "feat: updates"
-git push
+
+STATUS=$(git status -s)
+if [ -n "${STATUS}" ]; then
+  git add -A
+  git commit -m "feat: updates"
+  git push
+fi
 
 cd "${CUR_DIR}"
