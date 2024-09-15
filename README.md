@@ -68,35 +68,16 @@ git push -u origin master
 ```
 
 
-### Pull changes
+### Basic functions
 
 ```bash
-# Option 1 (auto, prefer option 2)
-git pull --recurse-submodules
+### Pull changes for Headings
+./Headings/Scripts/Pull.sh
 
-# Option 2 (after git pull)
-git submodule update --init --remote --recursive --rebase
-```
+### Commit changes in Headings
+./Headings/Scripts/CommitAndPush.sh
 
-
-### Update submodules
-
-```bash
-# Option 1 (auto)
-# --merge - merge current changes
-# --rebase - ...
-git submodule update --remote --rebase Headings
-
-# Option 2 (manual)
-cd Headings
-git fetch
-git rebase origin/master
-```
-
-
-### Publish submodule changes
-
-```bash
+### Push all changes (without add in main repo)
 ./Headings/Scripts/Publish.sh
 ```
 
