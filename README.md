@@ -4,11 +4,11 @@
 
 ### Installation
 
-1) Скачиваем `MikTex` [по этой инструкции](https://miktex.org/download).
+1) Download `MikTex` ([guide](https://miktex.org/download)).
 
-2) (Windows only) устанавливаем `Strawberry Perl`.
+2) (Windows only) install `Strawberry Perl`.
 
-3) Устанавливаем [расширения](#extensions) в `VScode`.
+3) Install [extensions](#extensions) for `VScode`.
 
 ```bash
 sudo apt-get install miktex
