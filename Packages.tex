@@ -199,14 +199,20 @@
 %%%% Bibliography
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\usepackage[backend=biber]{biblatex}
+\usepackage[
+    backend=biber,
+    style=numeric,
+    % sorting=nyt % alphabetical sorting order
+    sorting=none % sort by appearing in the text
+    ]{biblatex}
+\addbibresource{Source/references.bib}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Pictures and images
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \usepackage{graphicx, epsfig}     % images
-% \usepackage[final]{graphicx, epsfig}
+    % \usepackage[final]{graphicx, epsfig}
 \graphicspath{{./Images/}} % relative (to main.tex) path of images
 % \graphicspath{Images/} -- relative to file containing the \includegraphics command
 \usepackage{pgfplots}
