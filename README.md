@@ -14,6 +14,40 @@
 sudo apt-get install miktex
 ```
 
+#### VM
+
+Mictex installation: (guide: <https://miktex.org/download>)
+
+```bash
+curl -fsSL https://miktex.org/download/key | sudo gpg --dearmor -o /usr/share/keyrings/miktex.gpg
+
+# Ubuntu 22.04 LTS (Jammy Jellyfish)
+echo "deb [signed-by=/usr/share/keyrings/miktex.gpg] https://miktex.org/download/ubuntu jammy universe" | sudo tee /etc/apt/sources.list.d/miktex.list
+
+sudo apt-get update
+sudo apt-get install miktex
+```
+
+Install other things to make it work:
+
+```bash
+sudo apt-get install latexmk
+
+# Enable Automatic Package Installation in MiKTeX
+sudo initexmf --admin --set-config-value [Auto Install]=1
+sudo miktex --admin packages update
+
+# The following commands may not work
+sudo miktex --admin config --set [Auto Install]=1
+
+# manual settings
+sudo miktex --admin setup
+sudo miktex --admin update
+sudo miktex --admin packages update
+sudo miktex --admin packages install extsizes # Install specific package
+```
+
+
 ### Extensions
 
 - [Latex Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop).
